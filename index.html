@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feira de Ciências 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="logo" href="#"><span class="logo-icone" aria-hidden="true">✦</span> Feira de Ciências</a>
+
+    <!-- O menu hambúrguer: a caixinha guarda "aberto ou fechado",
+         o label é o botão das três barras. -->
+    <input class="menu-check" type="checkbox" id="menu-check">
+    <label class="menu-botao" for="menu-check" aria-label="Abrir ou fechar o menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="menu">
+      <a href="#oficinas">Oficinas</a>
+      <a href="#programacao">Programação</a>
+      <a href="#inscricao">Inscrição</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="destaque">
+      <div class="atomo" aria-hidden="true">⚛</div>
+      <p class="selo"><span class="pulso"></span> Inscrições abertas · 14 de novembro</p>
+      <h1 class="titulo">Feira de Ciências <span class="ano">2026</span></h1>
+      <p class="resumo">Projetos dos alunos, oficinas práticas e uma noite de observação do céu. Entrada gratuita para toda a comunidade, no ginásio da escola.</p>
+      <div class="acoes">
+        <a class="botao" href="#inscricao">Inscrever meu projeto</a>
+        <a class="botao botao-claro" href="#programacao">Ver programação</a>
+      </div>
+    </section>
+
+    <section id="oficinas" class="oficinas">
+      <div class="limite">
+        <h2>Oficinas</h2>
+        <div class="cartoes">
+          <article class="cartao">
+            <span class="cartao-icone" aria-hidden="true">🚀</span>
+            <h3>Foguete de garrafa</h3>
+            <p>Monte um foguete com uma garrafa PET e lance com água e ar comprimido.</p>
+            <span class="horario">9h · Pátio</span>
+          </article>
+          <article class="cartao">
+            <span class="cartao-icone" aria-hidden="true">🔬</span>
+            <h3>Microscópio caseiro</h3>
+            <p>Com a lente de um celular e uma gota de água, veja as células de uma folha. Traga uma folha de casa.</p>
+            <span class="horario">10h · Laboratório</span>
+          </article>
+          <article class="cartao">
+            <span class="cartao-icone" aria-hidden="true">🤖</span>
+            <h3>Robótica com sucata</h3>
+            <p>Um robô que anda, feito de motor de brinquedo e tampinhas.</p>
+            <span class="horario">11h · Sala 12</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="programacao" class="programacao">
+      <div class="limite">
+        <h2>Programação</h2>
+        <ol class="agenda">
+          <li><strong>8h</strong> Abertura, no palco do ginásio</li>
+          <li><strong>9h</strong> Oficinas (escolha uma na hora)</li>
+          <li><strong>13h</strong> Apresentação dos projetos</li>
+          <li><strong>16h</strong> Premiação</li>
+          <li><strong>18h</strong> Observação do céu, no campo</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="inscricao" class="inscricao">
+      <div class="limite">
+        <h2>Inscreva o seu projeto</h2>
+        <p>As inscrições vão até 30 de outubro. Cada equipe pode ter até quatro pessoas.</p>
+        <a class="botao" href="#">Fazer inscrição</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Feira de Ciências 2026 · Feita pelos alunos, para a comunidade</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,447 @@
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui,;
+  line-height: 1.6;
+  color: #212529;
+  background: #F8F9FA;
+}
+
+section {
+  padding: 56px 20px;
+}
+
+.limite {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 30px;
+  color: #1B1F3B;
+}
+
+a {
+  color: inherit;
+}
+
+
+
+.topo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+  background: #1B1F3B;
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo-icone {
+  color: #FFD43B;
+}
+
+
+.menu-check {
+  position: absolute;
+  opacity: 0;
+}
+
+.menu-botao {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 8px;
+  cursor: pointer;
+}
+
+.menu-botao span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+
+.menu-check:focus-visible + .menu-botao {
+  outline: 3px solid #74C0FC;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* As três barras viram um X */
+.menu-check:checked + .menu-botao span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-check:checked + .menu-botao span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-check:checked + .menu-botao span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu {
+  display: none;
+  flex-basis: 100%;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-check:checked ~ .menu {
+  display: flex;
+  animation: abrir 0.25s ease-out;
+}
+
+@keyframes abrir {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.menu a {
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFD43B;
+}
+
+
+
+.destaque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 56px 20px 72px;
+  color: #fff;
+  background: linear-gradient(160deg, #1B1F3B, #3B2A6B);
+}
+
+.atomo {
+  font-size: 64px;
+  line-height: 1;
+  color: #FFD43B;
+  animation: girar 8s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.selo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pulso {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #51CF66;
+  animation: pulsar 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes pulsar {
+  to {
+    transform: scale(0.5);
+    opacity: 0.4;
+  }
+}
+
+.titulo {
+  margin: 16px 0 8px;
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.ano {
+  color: #FFD43B;
+}
+
+.resumo {
+  max-width: 560px;
+  color: #DEE2E6;
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-color: #FFD43B;
+  color: #1B1F3B;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.botao-claro {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.selo,
+.titulo,
+.resumo,
+.acoes {
+  animation: surgir 0.6s ease-out both;
+}
+
+.titulo {
+  animation-delay: 0.1s;
+}
+
+.resumo {
+  animation-delay: 0.2s;
+}
+
+.acoes {
+  animation-delay: 0.3s;
+}
+
+
+
+.botao {
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+  background-color: #FAB005;
+  box-shadow: 0 6px 20px rgba(250, 176, 5, 0.35);
+}
+
+.botao-claro:hover {
+  background-color: #fff;
+  color: #1B1F3B;
+  box-shadow: none;
+}
+
+.botao:focus-visible {
+  outline: 3px solid #74C0FC;
+  outline-offset: 3px;
+}
+
+.botao:active {
+  transform: translateY(0);
+}
+
+.cartoes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #E9ECEF;
+  border-top: 4px solid #FFD43B;
+  border-radius: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(27, 31, 59, 0.12);
+}
+
+.cartao h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #1B1F3B;
+}
+
+.cartao p {
+  margin: 0 0 16px;
+}
+
+.cartao-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: #FFF3BF;
+  font-size: 24px;
+}
+
+
+.horario {
+  margin-top: auto;
+  color: #E8590C;
+  font-weight: 700;
+}
+
+/* 5. Programação e rodapé */
+
+.programacao {
+  background: #fff;
+}
+
+.agenda {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.agenda li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+.agenda li:nth-child(odd) {
+  background: #F1F3F5;
+}
+
+.agenda strong {
+  flex: 0 0 56px;
+  padding: 2px 0;
+  border-radius: 6px;
+  background: #1B1F3B;
+  color: #FFD43B;
+  text-align: center;
+}
+
+.inscricao {
+  text-align: center;
+  background: linear-gradient(160deg, #FFF3BF, #FFE8CC);
+}
+
+.rodape {
+  padding: 28px 20px;
+  background: #1B1F3B;
+  color: #ADB5BD;
+  font-size: 14px;
+  text-align: center;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+
+
+@media (min-width: 768px) {
+  .topo {
+    padding: 14px 40px;
+  }
+
+  .menu-botao {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+  }
+
+  .destaque {
+    padding: 88px 40px 104px;
+  }
+
+  .titulo {
+    font-size: 60px;
+  }
+
+  section {
+    padding: 72px 40px;
+  }
+
+  .cartoes {
+    flex-direction: row;
+  }
+
+  .cartao {
+    flex: 1;
+  }
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  .atomo,
+  .pulso,
+  .selo,
+  .titulo,
+  .resumo,
+  .acoes,
+  .menu-check:checked ~ .menu {
+    animation: none;
+  }
+
+  .botao,
+  .cartao,
+  .menu a,
+  .menu-botao span {
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
